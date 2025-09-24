@@ -1,0 +1,46 @@
+# Byte-compiled / cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.sample
+
+# Virtual environments
+venv/
+.venv/
+
+# Mac / IDE / Editor files
+.DS_Store
+.vscode/
+.idea/
+
+# Models (do not commit heavy files)
+models/*.pkl
+models/*.h5
+models/*.pt
+models/*.onnx
+*.joblib
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Build / distribution
+build/
+dist/
+*.egg-info/
+
+# Coverage / testing
+.coverage
+htmlcov/
+models/*.pkl
+venv/
+*.zip
+venv/
+models/*.pkl
+*.zip
