@@ -8,6 +8,7 @@ main.py
 import uvicorn
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 from datetime import datetime
 import pandas as pd
 import numpy as np
@@ -27,6 +28,15 @@ from bot import (
 
 
 app = FastAPI(title="DeFi ML Bot API", version="1.0.0")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], 
+    allow_credentials=True,
+    allow_methods=["*"],  
+    allow_headers=["*"], 
+)
+
 
 model = load_model()
 model_features = model.get_booster().feature_names
